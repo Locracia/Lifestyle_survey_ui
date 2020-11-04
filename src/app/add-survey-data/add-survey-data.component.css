@@ -1,0 +1,73 @@
+.main-content-container {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+}
+
+.survey-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form-header {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.personal-information-container {
+  background-color: #c5cae9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.personal-information-input-container {
+  padding: 20px;
+  width: 50%;
+}
+
+.favourite-food-form-container {
+  background-color: #c5cae9;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.favourite-food-form-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.favourite-food-check-box-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activities-form-container {
+  background-color: #c5cae9;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ratings-input-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.btn {
+  margin-bottom: 8%;
+}
+
+.btn-secondary.disabled,
+.btn-secondar:disabled{
+  background-color: #e3e2e2;
+  border: 1px solid e3e2e2;
+  color: #9a9595;
+  pointer-events: none;
+}

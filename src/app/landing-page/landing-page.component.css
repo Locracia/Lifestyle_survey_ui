@@ -1,0 +1,13 @@
+.landing-page-buttons-navigation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-container {
+  margin: 15%;
+}
+
+.central-button-router {
+  background-color: #20639b;
+  color: white;
+}

@@ -1,0 +1,52 @@
+<div class="modal-header">
+  <h4 class="modal-title">Modal title</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="modal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>
+    Percentage That Like Pizza :<span>{{
+      mealStatistics.percentageThatLikePizza
+    }}</span>
+  </p>
+  <p>
+    Percentage That Like Pasta :<span>{{
+      mealStatistics.percentageThatLikePasta
+    }}</span>
+  </p>
+  <p>
+    Percentage That Like Pap and Wors :<span>{{
+      mealStatistics.percentageThatLikePapAndWors
+    }}</span>
+  </p>
+  <p>
+    Percentage That Like Chicken and Stir Fry :<span>{{
+      mealStatistics.percentageThatLikeChickenAndStirFry
+    }}</span>
+  </p>
+  <p>
+    Percentage That Like Beef and Stir Fry :<span>{{
+      mealStatistics.percentageThatLikeBeefAndStirFry
+    }}</span>
+  </p>
+  <p>
+    Percentage That Like Other :<span>{{
+      mealStatistics.percentageThatLikeOther
+    }}</span>
+  </p>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-light"
+    (click)="modal.close('Close click')"
+  >
+    Close
+  </button>
+</div>

@@ -1,0 +1,16 @@
+.main-content-container {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 18%;
+}
+
+.analysis-link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.analysis-link {
+  background-color: #20639b;
+  color: white;
+}

@@ -1,0 +1,107 @@
+<div class="main-content-container">
+  <div class="survey-form-container">
+    <div class="personal-information-container">
+      <h3 class="col-md-12 input-form-header">Personal Information</h3>
+      <span class="personal-information-input-container col-md-6">
+        <label for="name">Name :</label>
+        <input
+          id="name"
+          type="text"
+          class="form-control"
+          [(ngModel)]="first_name"
+        />
+      </span>
+      <span class="personal-information-input-container col-md-6">
+        <label for="last-name">Last Name :</label>
+        <input
+          id="last-name"
+          type="text"
+          class="form-control"
+          [(ngModel)]="last_name"
+        />
+      </span>
+      <span class="personal-information-input-container col-md-6">
+        <label for="contact-number">Contact Number :</label>
+        <input
+          id="contact-number"
+          type="tel"
+          class="form-control"
+          [(ngModel)]="contact_number"
+        />
+      </span>
+      <span class="personal-information-input-container col-md-6">
+        <label for="age">Age :</label>
+        <input id="age" type="number" class="form-control" [(ngModel)]="age" />
+      </span>
+    </div>
+
+    <div class="favourite-food-form-container">
+      <h3 class="col-md-12 input-form-header">Favourite Food</h3>
+      <div class="favourite-food-form-content">
+        <span
+          *ngFor="let meal of favouriteFoods"
+          class="favourite-food-check-box-container col-md-6"
+          ><label for="pizza">{{ meal.food }}</label
+          ><input
+            id="pizza"
+            type="checkbox"
+            [(ngModel)]="meal.checked"
+            (change)="selectFavouriteFood($event, meal.foodKey)"
+        /></span>
+      </div>
+    </div>
+
+    <div class="activities-form-container">
+      <h3 class="col-md-12 input-form-header">Favourite Activity</h3>
+      <span class="ratings-input-container col-md-6"
+        ><label>I like to eat out :</label>
+        <ngb-rating
+          [(rate)]="i_like_to_eat_out"
+          (hover)="hovered = $event"
+          (leave)="hovered = 0"
+        ></ngb-rating
+      ></span>
+      <span class="ratings-input-container col-md-6"
+        ><label>I like to watch movies :</label>
+        <ngb-rating
+          [(rate)]="i_like_to_watch_movies"
+          (hover)="hovered = $event"
+          (leave)="hovered = 0"
+        ></ngb-rating
+      ></span>
+      <span class="ratings-input-container col-md-6"
+        ><label>I like to watch TV :</label>
+        <ngb-rating
+          [(rate)]="i_like_to_watch_tv"
+          (hover)="hovered = $event"
+          (leave)="hovered = 0"
+        ></ngb-rating
+      ></span>
+      <span class="ratings-input-container col-md-6"
+        ><label>I like listening to the radio :</label>
+        <ngb-rating
+          [(rate)]="i_like_to_listen_to_the_radio"
+          (hover)="hovered = $event"
+          (leave)="hovered = 0"
+        ></ngb-rating
+      ></span>
+    </div>
+
+    <button
+      [disabled]="
+        first_name === '' ||
+        last_name === '' ||
+        contact_number === '' ||
+        age === '' ||
+        i_like_to_eat_out === 0 ||
+        i_like_to_watch_movies === 0 ||
+        i_like_to_watch_tv === 0 ||
+        i_like_to_listen_to_the_radio === 0
+      "
+      class="btn btn-secondary btn-lg"
+      (click)="submitData()"
+    >
+      Submit
+    </button>
+  </div>
+</div>
